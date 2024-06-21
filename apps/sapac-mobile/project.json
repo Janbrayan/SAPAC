@@ -1,0 +1,9 @@
+{
+  "name": "sapac-mobile",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/sapac-mobile/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project sapac-mobile --web",
+  "targets": {}
+}

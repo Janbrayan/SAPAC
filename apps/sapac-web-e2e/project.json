@@ -1,0 +1,10 @@
+{
+  "name": "sapac-web-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/sapac-web-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["sapac-web"],
+  "// targets": "to see all targets run: nx show project sapac-web-e2e --web",
+  "targets": {}
+}
