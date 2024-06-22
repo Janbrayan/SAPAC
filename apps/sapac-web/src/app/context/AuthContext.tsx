@@ -1,12 +1,14 @@
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 import { signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
-import { auth } from '../services/firebaseConfig';
+import { auth, db } from '../services/firebaseConfig';
+import { doc, getDoc } from 'firebase/firestore';
 
 type User = {
     id: string;
     name: string;
     email: string;
+    role: string;
 } | null;
 
 type AuthContextType = {
@@ -29,11 +31,23 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
-            if (user) {
-                const loggedInUser = { id: user.uid, name: user.displayName ?? 'User', email: user.email ?? 'Unknown' };
-                setUser(loggedInUser);
-                localStorage.setItem('user', JSON.stringify(loggedInUser));
+        const unsubscribe = onAuthStateChanged(auth, async (authUser) => {
+            if (authUser) {
+                const userDoc = await getDoc(doc(db, 'users', authUser.uid));
+                if (userDoc.exists()) {
+                    const userData = userDoc.data();
+                    const loggedInUser = {
+                        id: authUser.uid,
+                        name: userData.name ?? 'User',
+                        email: authUser.email ?? 'Unknown',
+                        role: userData.role ?? 'worker'
+                    };
+                    setUser(loggedInUser);
+                    localStorage.setItem('user', JSON.stringify(loggedInUser));
+                } else {
+                    setUser(null);
+                    localStorage.removeItem('user');
+                }
             } else {
                 setUser(null);
                 localStorage.removeItem('user');
@@ -45,10 +59,22 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     const login = async (email: string, password: string) => {
         try {
             const userCredential = await signInWithEmailAndPassword(auth, email, password);
-            const loggedInUser = { id: userCredential.user.uid, name: userCredential.user.displayName ?? 'User', email: userCredential.user.email ?? 'Unknown' };
-            setUser(loggedInUser);
-            localStorage.setItem('user', JSON.stringify(loggedInUser));
-            navigate('/admin'); // Redirigir después de iniciar sesión
+            const user = userCredential.user;
+            const userDoc = await getDoc(doc(db, 'users', user.uid));
+            if (userDoc.exists()) {
+                const userData = userDoc.data();
+                const loggedInUser = {
+                    id: user.uid,
+                    name: userData.name ?? 'User',
+                    email: user.email ?? 'Unknown',
+                    role: userData.role ?? 'worker'
+                };
+                setUser(loggedInUser);
+                localStorage.setItem('user', JSON.stringify(loggedInUser));
+                navigateBasedOnRole(userData.role ?? 'worker'); // Redirigir basado en el rol almacenado
+            } else {
+                throw new Error('User data not found');
+            }
         } catch (error) {
             console.error('Failed to log in:', error);
             throw error;
@@ -64,6 +90,19 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         } catch (error) {
             console.error('Failed to log out:', error);
             throw error;
+        }
+    };
+
+    // Redirige al usuario basado en su rol
+    const navigateBasedOnRole = (role: string) => {
+        if (role === 'superadmin') {
+            navigate('/superadmin');
+        } else if (role === 'admin') {
+            navigate('/admin');
+        } else if (role === 'worker') {
+            navigate('/worker');
+        } else {
+            navigate('/'); // O cualquier ruta predeterminada
         }
     };
 

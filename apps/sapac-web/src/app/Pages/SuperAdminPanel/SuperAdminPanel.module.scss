@@ -1,0 +1,128 @@
+.superAdminPanelContainer {
+    display: flex;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa; // Fondo azul claro
+}
+
+.sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); // Fondo azul degradado
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%);
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #b2dfdb; // Color verde agua claro
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #00acc1; // Cian
+    color: white;
+    transform: scale(1.05);
+}
+
+.sidebar ul li a.activeLink {
+    background-color: #00796b; // Verde agua oscuro
+    color: white;
+}
+
+.sidebar ul li a svg {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.logoutButton {
+    background-color: #d32f2f; // Rojo
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoutButton:hover {
+    background-color: #c62828; // Rojo oscuro
+    transform: scale(1.05);
+}
+
+.logoutButton svg {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ffffff; // Fondo blanco
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #00796b; // Verde agua
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.toggleButton {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.toggleButton:hover {
+    transform: scale(1.2);
+}
