@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap');
+
+/* Definición de la animación para el fondo */
+@keyframes backgroundMove {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+/* Estilos generales para asegurar que la altura de todo el contenido ocupe el 100% de la pantalla */
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Contenedor principal del login con animación de fondo */
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(270deg, #00AEEF, #0074D9, #001F3F);
+    background-size: 200% 200%;
+    animation: backgroundMove 20s linear infinite;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Encabezado de la página, posicionado en la parte superior */
+.header {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 2.8rem;
+    color: white;
+    font-weight: 700;
+    font-family: 'Merriweather', serif;
+}
+
+/* Estilos para el logo circular */
+.logo {
+    width: 220px;
+    height: 220px;
+    background-image: url('../../../assets/sapac-logo-2.png');
+    /* Ruta del logo */
+    background-size: cover;
+    background-position: center;
+    margin-top: 100px;
+    /* Ajusta esto si necesitas más o menos espacio entre el encabezado y el logo */
+    margin-bottom: 20px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+/* Subtítulo de la página */
+.subtitle {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+/* Contenedor del formulario */
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Grupo de formularios con espaciado entre cada uno */
+.formGroup {
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+}
+
+/* Estilos para los inputs del formulario */
+.formGroup input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #0056b3;
+    border-radius: 12px;
+    /* Bordes redondeados */
+    font-size: 1rem;
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+/* Cambia el color del borde al enfocar el input */
+.formGroup input:focus {
+    border-color: #00AEEF;
+}
+
+/* Botón de login con bordes redondeados */
+.loginButton {
+    padding: 15px 20px;
+    background-color: #FFD700;
+    /* Color dorado para el botón */
+    color: #333;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+    transition: background-color 0.3s;
+}
+
+/* Cambia el color del fondo al pasar el cursor sobre el botón */
+.loginButton:hover {
+    background-color: #FFC700;
+}
+
+/* Cambia el color del fondo al presionar el botón */
+.loginButton:active {
+    background-color: #FFB700;
+}
+/* Resto de tus estilos... */
+
+.formGroup {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.showPasswordButton {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+/* Añade otros estilos según sea necesario */

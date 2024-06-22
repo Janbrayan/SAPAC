@@ -1,0 +1,10 @@
+{
+  "projects": {
+    "default": "sapac-670e4"
+  },
+  "dataconnectEmulatorConfig": {
+    "postgres": {
+      "localConnectionString": "postgresql://localhost:5432?sslmode=disable"
+    }
+  }
+}
