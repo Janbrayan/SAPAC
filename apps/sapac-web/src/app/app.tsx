@@ -5,9 +5,9 @@ import AdminPanel from './Pages/AdminPanel/AdminPanel';
 import SuperAdminPanel from './Pages/SuperAdminPanel/SuperAdminPanel';
 import WorkerPanel from './Pages/WorkerPanel/WorkerPanel';
 import Dashboard from './Pages/SuperAdminPanel/Dashboard';
-import CreateUser from './Pages/SuperAdminPanel/CreateUser';
-import ViewUsers from './Pages/SuperAdminPanel/ViewUsers';
-import ViewReports from './Pages/SuperAdminPanel/ViewReports';
+import CreateUser from './components/UserManagement/CreateUser';
+import ViewUsers from './components/UserManagement/ViewUsers';
+import ViewReports from './components/ReportManagement/ViewReports';
 import { AuthProvider } from './context/AuthContext';
 import PrivateRoute from './context/PrivateRoute';
 
