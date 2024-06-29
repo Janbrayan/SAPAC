@@ -1,10 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './Pages/Login/Login';
 import AdminPanel from './Pages/AdminPanel/AdminPanel';
 import SuperAdminPanel from './Pages/SuperAdminPanel/SuperAdminPanel';
 import WorkerPanel from './Pages/WorkerPanel/WorkerPanel';
-import Dashboard from './Pages/SuperAdminPanel/Dashboard';
+import Dashboard from './Pages/Common/Dashboard';
 import CreateUser from './components/UserManagement/CreateUser';
 import ViewUsers from './components/UserManagement/ViewUsers';
 import ViewReports from './components/ReportManagement/ViewReports';
@@ -17,16 +17,25 @@ const App: React.FC = () => {
             <AuthProvider>
                 <Routes>
                     <Route path="/" element={<Login />} />
-                    <Route path="/superadmin" element={<PrivateRoute role="superadmin"><SuperAdminPanel /></PrivateRoute>}>
-                        <Route index element={<Navigate to="dashboard" />} />
-                        <Route path="dashboard" element={<PrivateRoute role="superadmin"><Dashboard /></PrivateRoute>} />
-                        <Route path="create-user" element={<PrivateRoute role="superadmin"><CreateUser /></PrivateRoute>} />
-                        <Route path="view-users" element={<PrivateRoute role="superadmin"><ViewUsers /></PrivateRoute>} />
-                        <Route path="view-reports" element={<PrivateRoute role="superadmin"><ViewReports /></PrivateRoute>} />
+                    <Route path="/admin" element={<PrivateRoute role="admin"><AdminPanel /></PrivateRoute>}>
+                        <Route index element={<Dashboard showTotalUsers={true} />} />
+                        <Route path="dashboard" element={<Dashboard showTotalUsers={true} />} />
+                        <Route path="create-user" element={<CreateUser />} />
+                        <Route path="view-users" element={<ViewUsers filterSuperAdmin={true} />} />
+                        <Route path="view-reports" element={<ViewReports />} />
                     </Route>
-                    <Route path="/admin" element={<PrivateRoute role="admin"><AdminPanel /></PrivateRoute>} />
-                    <Route path="/worker" element={<PrivateRoute role="worker"><WorkerPanel /></PrivateRoute>} />
-                    <Route path="*" element={<Navigate to="/" />} />
+                    <Route path="/superadmin" element={<PrivateRoute role="superadmin"><SuperAdminPanel /></PrivateRoute>}>
+                        <Route index element={<Dashboard showTotalUsers={true} />} />
+                        <Route path="dashboard" element={<Dashboard showTotalUsers={true} />} />
+                        <Route path="create-user" element={<CreateUser />} />
+                        <Route path="view-users" element={<ViewUsers filterSuperAdmin={false} />} />
+                        <Route path="view-reports" element={<ViewReports />} />
+                    </Route>
+                    <Route path="/worker" element={<PrivateRoute role="worker"><WorkerPanel /></PrivateRoute>}>
+                        <Route index element={<Dashboard showTotalUsers={false} />} />
+                        <Route path="dashboard" element={<Dashboard showTotalUsers={false} />} />
+                        <Route path="view-reports" element={<ViewReports />} />
+                    </Route>
                 </Routes>
             </AuthProvider>
         </Router>

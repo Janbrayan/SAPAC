@@ -88,6 +88,7 @@
     "react-native": "0.74.1",
     "react-router-dom": "6.11.2",
     "react-toastify": "^10.0.5",
+    "sweetalert2": "^11.12.1",
     "tslib": "^2.3.0"
   }
 }

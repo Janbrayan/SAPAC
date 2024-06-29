@@ -283,3 +283,196 @@ Issues? Report them at https://github.com/firebase/firebase-tools/issues and att
 [debug] [2024-06-26T02:18:55.129Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast {"eventId":"dc067d57-df77-4e8d-9ecf-17ca40485659","eventType":"providers/firebase.auth/eventTypes/user.delete","resource":{"name":"projects/sapac-670e4","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2024-06-26T02:18:55.129Z","data":{"uid":"XV5kynwSaIeATJu3GASEpHsQvycO","email":"fluviel@gmail.com","emailVerified":false,"metadata":{"creationTime":"2024-06-26T02:18:40.491Z","lastSignInTime":"2024-06-26T02:18:40.491Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"fluviel@gmail.com","federatedId":"fluviel@gmail.com","rawId":"fluviel@gmail.com"}]}}
 [debug] [2024-06-26T02:18:55.131Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast 200
 [debug] [2024-06-26T02:18:55.131Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2024-06-29T06:12:10.423Z] ----------------------------------------------------------------------
+[debug] [2024-06-29T06:12:10.425Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2024-06-29T06:12:10.425Z] CLI Version:   13.11.4
+[debug] [2024-06-29T06:12:10.426Z] Platform:      win32
+[debug] [2024-06-29T06:12:10.426Z] Node Version:  v20.12.1
+[debug] [2024-06-29T06:12:10.426Z] Time:          Sat Jun 29 2024 00:12:10 GMT-0600 (hora estándar central)
+[debug] [2024-06-29T06:12:10.426Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-29T06:12:10.441Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-06-29T06:12:10.588Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-29T06:12:10.588Z] > authorizing via signed-in user (janbrayanbecasalario@gmail.com)
+[debug] [2024-06-29T06:12:10.766Z] java version "17.0.10" 2024-01-16 LTS
+
+[debug] [2024-06-29T06:12:10.767Z] Java(TM) SE Runtime Environment (build 17.0.10+11-LTS-240)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.10+11-LTS-240, mixed mode, sharing)
+
+[debug] [2024-06-29T06:12:10.794Z] Parsed Java major version: 17
+[info] i  emulators: Starting emulators: auth, functions, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, database, hosting, pubsub, storage"}}
+[debug] [2024-06-29T06:12:10.818Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-29T06:12:10.818Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-29T06:12:10.819Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-29T06:12:10.819Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-29T06:12:10.819Z] [database] Database Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-29T06:12:10.819Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-29T06:12:10.819Z] [pubsub] Pub/Sub Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-29T06:12:10.819Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-29T06:12:10.819Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8082}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9001}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"pubsub":[{"address":"127.0.0.1","family":"IPv4","port":8087}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project sapac-670e4. This may result in unexpected behavior. 
+[debug] [2024-06-29T06:12:10.826Z] [hub] writing locator at C:\Users\janbr\AppData\Local\Temp\hub-sapac-670e4.json
+[debug] [2024-06-29T06:12:10.842Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-29T06:12:10.842Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-29T06:12:10.843Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8082}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9001}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"pubsub":[{"address":"127.0.0.1","family":"IPv4","port":8087}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mdataconnect\u001b[22m"}}
+[debug] [2024-06-29T06:12:10.846Z] defaultcredentials: writing to file C:\Users\janbr\AppData\Roaming\firebase\janbrayanbecasalario_gmail_com_application_default_credentials.json
+[debug] [2024-06-29T06:12:10.849Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-06-29T06:12:10.849Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-06-29T06:12:10.864Z] Setting GAC to C:\Users\janbr\AppData\Roaming\firebase\janbrayanbecasalario_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\janbr\\AppData\\Roaming\\firebase\\janbrayanbecasalario_gmail_com_application_default_credentials.json"}}
+[debug] [2024-06-29T06:12:10.870Z] > refreshing access token with scopes: []
+[debug] [2024-06-29T06:12:10.871Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-06-29T06:12:10.871Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-06-29T06:12:11.115Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-06-29T06:12:11.115Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-06-29T06:12:11.132Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sapac-670e4/adminSdkConfig [none]
+[debug] [2024-06-29T06:12:11.491Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sapac-670e4/adminSdkConfig 200
+[debug] [2024-06-29T06:12:11.491Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sapac-670e4/adminSdkConfig {"projectId":"sapac-670e4","databaseURL":"https://sapac-670e4-default-rtdb.firebaseio.com","storageBucket":"sapac-670e4.appspot.com"}
+[warn] !  firestore: Cloud Firestore Emulator does not support multiple databases yet. {"metadata":{"emulator":{"name":"firestore"},"message":"Cloud Firestore Emulator does not support multiple databases yet."}}
+[warn] !  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file. {"metadata":{"emulator":{"name":"firestore"},"message":"Did not find a Cloud Firestore rules file specified in a firebase.json config file."}}
+[warn] !  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration. {"metadata":{"emulator":{"name":"firestore"},"message":"The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration."}}
+[debug] [2024-06-29T06:12:11.506Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-06-29T06:12:11.507Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2024-06-29T06:12:11.507Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\janbr\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.19.7.jar","--host","127.0.0.1","--port",8082,"--websocket_port",9150,"--project_id","sapac-670e4","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\janbr\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.19.7.jar\",\"--host\",\"127.0.0.1\",\"--port\",8082,\"--websocket_port\",9150,\"--project_id\",\"sapac-670e4\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2024-06-29T06:12:13.793Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sapac-670e4 [none]
+[debug] [2024-06-29T06:12:13.980Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sapac-670e4 200
+[debug] [2024-06-29T06:12:13.981Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sapac-670e4 {"projectId":"sapac-670e4","projectNumber":"675912575796","displayName":"SAPAC","name":"projects/sapac-670e4","resources":{"hostingSite":"sapac-670e4","realtimeDatabaseInstance":"sapac-670e4-default-rtdb"},"state":"ACTIVE","etag":"1_87f29305-a7b9-4b71-bee5-c6b03d4d8237"}
+[debug] [2024-06-29T06:12:13.981Z] database rules config:  [{"instance":"sapac-670e4-default-rtdb","rules":"C:\\Sapac-Proyect\\SAPAC\\database.rules.json"}]
+[debug] [2024-06-29T06:12:13.986Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2024-06-29T06:12:13.986Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-06-29T06:12:13.986Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2024-06-29T06:12:13.986Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","C:\\Users\\janbr\\.cache\\firebase\\emulators\\firebase-database-emulator-v4.11.2.jar","--host","127.0.0.1","--port",9001,"--single_project_mode","Warning","--functions_emulator_host","127.0.0.1","--functions_emulator_port",5001],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host","single_project_mode"],"joinArgs":false,"shell":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\janbr\\\\.cache\\\\firebase\\\\emulators\\\\firebase-database-emulator-v4.11.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",9001,\"--single_project_mode\",\"Warning\",\"--functions_emulator_host\",\"127.0.0.1\",\"--functions_emulator_port\",5001],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false}"}}
+[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
+[debug] [2024-06-29T06:12:26.002Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2024-06-29T06:12:26.003Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-06-29T06:12:26.003Z] Starting Pub/Sub Emulator with command {"binary":"C:\\Users\\janbr\\.cache\\firebase\\emulators\\pubsub-emulator-0.8.14\\pubsub-emulator\\bin\\cloud-pubsub-emulator.bat","args":["--host=127.0.0.1","--port=8087"],"optionalArgs":["port","host"],"joinArgs":true,"shell":true} {"metadata":{"emulator":{"name":"pubsub"},"message":"Starting Pub/Sub Emulator with command {\"binary\":\"C:\\\\Users\\\\janbr\\\\.cache\\\\firebase\\\\emulators\\\\pubsub-emulator-0.8.14\\\\pubsub-emulator\\\\bin\\\\cloud-pubsub-emulator.bat\",\"args\":[\"--host=127.0.0.1\",\"--port=8087\"],\"optionalArgs\":[\"port\",\"host\"],\"joinArgs\":true,\"shell\":true}"}}
+[info] i  pubsub: Pub/Sub Emulator logging to pubsub-debug.log {"metadata":{"emulator":{"name":"pubsub"},"message":"Pub/Sub Emulator logging to \u001b[1mpubsub-debug.log\u001b[22m"}}
+[debug] [2024-06-29T06:12:29.192Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-06-29T06:12:30.688Z] Temp file directory for storage emulator: C:\Users\janbr\AppData\Local\Temp/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: C:\\Users\\janbr\\AppData\\Local\\Temp/firebase/storage/blobs"}}
+[debug] [2024-06-29T06:12:30.698Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/sapac-670e4/sites 
+[debug] [2024-06-29T06:12:31.772Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/sapac-670e4/sites 200
+[debug] [2024-06-29T06:12:31.772Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/sapac-670e4/sites {"sites":[{"name":"projects/sapac-670e4/sites/sapac-670e4","defaultUrl":"https://sapac-670e4.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-06-29T06:12:31.773Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sapac-670e4/webApps/-/config [none]
+[debug] [2024-06-29T06:12:32.244Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sapac-670e4/webApps/-/config 200
+[debug] [2024-06-29T06:12:32.244Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sapac-670e4/webApps/-/config {"projectId":"sapac-670e4","appId":"1:675912575796:web:025de52e420821100a9361","databaseURL":"https://sapac-670e4-default-rtdb.firebaseio.com","storageBucket":"sapac-670e4.appspot.com","apiKey":"AIzaSyBudX6kUlmUgvsZSZeda9AcT4wGkimgDHM","authDomain":"sapac-670e4.firebaseapp.com","messagingSenderId":"675912575796","measurementId":"G-R3Z2X88967"}
+[debug] [2024-06-29T06:12:32.249Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sapac-670e4 [none]
+[debug] [2024-06-29T06:12:32.392Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sapac-670e4 200
+[debug] [2024-06-29T06:12:32.392Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sapac-670e4 {"projectId":"sapac-670e4","projectNumber":"675912575796","displayName":"SAPAC","name":"projects/sapac-670e4","resources":{"hostingSite":"sapac-670e4","realtimeDatabaseInstance":"sapac-670e4-default-rtdb"},"state":"ACTIVE","etag":"1_87f29305-a7b9-4b71-bee5-c6b03d4d8237"}
+[debug] [2024-06-29T06:12:32.394Z] Specified "public" directory "dist/apps/sapac-web" does not exist; Deploy to Hosting site "sapac-670e4" may fail or be empty.
+[info] i  hosting[sapac-670e4]: Serving hosting files from: dist/apps/sapac-web {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mdist/apps/sapac-web\u001b[22m"}}
+[info] +  hosting[sapac-670e4]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[debug] [2024-06-29T06:12:32.547Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-06-29T06:12:32.548Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-06-29T06:12:32.548Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\janbr\\.cache\\firebase\\emulators\\ui-v1.12.1\\server\\server.mjs"],"optionalArgs":[],"joinArgs":false,"shell":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\janbr\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.12.1\\\\server\\\\server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false,\"shell\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-06-29T06:12:32.964Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2024-06-29T06:12:32.965Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "C:\Sapac-Proyect\SAPAC\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Sapac-Proyect\\SAPAC\\functions\" for Cloud Functions..."}}
+[debug] [2024-06-29T06:12:32.993Z] Validating nodejs source
+[debug] [2024-06-29T06:12:38.074Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-06-29T06:12:38.074Z] Building nodejs source
+[debug] [2024-06-29T06:12:38.074Z] Failed to find version of module node: reached end of search path C:\Sapac-Proyect\SAPAC\functions\node_modules
+[info] +  functions: Using node@20 from host. 
+[debug] [2024-06-29T06:12:38.078Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-06-29T06:12:38.087Z] Found firebase-functions binary at 'C:\Sapac-Proyect\SAPAC\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8888
+
+[debug] [2024-06-29T06:12:43.651Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2024-06-29T06:12:48.683Z] >>> [apiv2][query] PUT http://127.0.0.1:9001/.settings/rules.json ns=sapac-670e4-default-rtdb
+[debug] [2024-06-29T06:12:48.683Z] >>> [apiv2][body] PUT http://127.0.0.1:9001/.settings/rules.json "{\r\n\r\n  \"rules\": {\r\n    \".read\": false,\r\n    \".write\": false\r\n  }\r\n}"
+[debug] [2024-06-29T06:12:49.148Z] <<< [apiv2][status] PUT http://127.0.0.1:9001/.settings/rules.json 200
+[debug] [2024-06-29T06:12:49.148Z] <<< [apiv2][body] PUT http://127.0.0.1:9001/.settings/rules.json {"status":"ok"}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬─────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:4000/auth      │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Firestore      │ 127.0.0.1:8082 │ http://127.0.0.1:4000/firestore │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Database       │ 127.0.0.1:9001 │ http://127.0.0.1:4000/database  │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Hosting        │ 127.0.0.1:5000 │ n/a                             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Pub/Sub        │ 127.0.0.1:8087 │ n/a                             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Storage        │ 127.0.0.1:9199 │ http://127.0.0.1:4000/storage   │
+└────────────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500, 9150
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-06-29T06:13:40.859Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast [none]
+[debug] [2024-06-29T06:13:40.859Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast {"eventId":"9ba835bd-1926-403c-b404-432061ab0154","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/sapac-670e4","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2024-06-29T06:13:40.858Z","data":{"uid":"EBmDQNRoe3rbEH3SluE9qRRdQl0b","email":"admin@gmail.com","emailVerified":false,"displayName":"","photoURL":"","metadata":{"creationTime":"2024-06-29T06:13:40.857Z","lastSignInTime":"2024-06-29T06:13:40.857Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"admin@gmail.com","federatedId":"admin@gmail.com","rawId":"admin@gmail.com","displayName":"","photoUrl":""}],"mfaInfo":[]}}
+[debug] [2024-06-29T06:13:40.865Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast 200
+[debug] [2024-06-29T06:13:40.865Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2024-06-29T06:14:48.901Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast [none]
+[debug] [2024-06-29T06:14:48.901Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast {"eventId":"37b7fa2c-a87e-4e90-8e67-02ad90851128","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/sapac-670e4","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2024-06-29T06:14:48.901Z","data":{"uid":"hECMTjbPsMTj7WLMs15TvlwcVkx2","email":"fluviel@gmail.com","emailVerified":false,"metadata":{"creationTime":"2024-06-29T06:14:48.900Z","lastSignInTime":"2024-06-29T06:14:48.900Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"fluviel@gmail.com","federatedId":"fluviel@gmail.com","rawId":"fluviel@gmail.com"}]}}
+[debug] [2024-06-29T06:14:48.904Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast 200
+[debug] [2024-06-29T06:14:48.904Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2024-06-29T06:17:34.161Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast [none]
+[debug] [2024-06-29T06:17:34.162Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast {"eventId":"6af2d564-6bce-4c42-ac3e-7fc08afc7565","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/sapac-670e4","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2024-06-29T06:17:34.161Z","data":{"uid":"4vIozupRYPX5Jj6TMkbuRHnK3QmR","email":"admin1@gmail.com","emailVerified":false,"metadata":{"creationTime":"2024-06-29T06:17:34.161Z","lastSignInTime":"2024-06-29T06:17:34.161Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"admin1@gmail.com","federatedId":"admin1@gmail.com","rawId":"admin1@gmail.com"}]}}
+[debug] [2024-06-29T06:17:34.164Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast 200
+[debug] [2024-06-29T06:17:34.164Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2024-06-29T08:06:28.310Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast [none]
+[debug] [2024-06-29T08:06:28.310Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast {"eventId":"467d34fc-27f0-4955-ab1a-cdf800dcbb56","eventType":"providers/firebase.auth/eventTypes/user.delete","resource":{"name":"projects/sapac-670e4","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2024-06-29T08:06:28.310Z","data":{"uid":"hECMTjbPsMTj7WLMs15TvlwcVkx2","email":"fluviel@gmail.com","emailVerified":false,"metadata":{"creationTime":"2024-06-29T06:14:48.900Z","lastSignInTime":"2024-06-29T06:15:19.665Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"fluviel@gmail.com","federatedId":"fluviel@gmail.com","rawId":"fluviel@gmail.com"}]}}
+[debug] [2024-06-29T08:06:28.312Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast 200
+[debug] [2024-06-29T08:06:28.312Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2024-06-29T08:06:32.263Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast [none]
+[debug] [2024-06-29T08:06:32.264Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast {"eventId":"c5405e7a-e870-42b9-8214-d9f1c835adc5","eventType":"providers/firebase.auth/eventTypes/user.delete","resource":{"name":"projects/sapac-670e4","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2024-06-29T08:06:32.263Z","data":{"uid":"4vIozupRYPX5Jj6TMkbuRHnK3QmR","email":"admin1@gmail.com","emailVerified":false,"metadata":{"creationTime":"2024-06-29T06:17:34.161Z","lastSignInTime":"2024-06-29T06:17:34.161Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"admin1@gmail.com","federatedId":"admin1@gmail.com","rawId":"admin1@gmail.com"}]}}
+[debug] [2024-06-29T08:06:32.267Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast 200
+[debug] [2024-06-29T08:06:32.267Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2024-06-29T08:08:03.641Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast [none]
+[debug] [2024-06-29T08:08:03.641Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast {"eventId":"667d38e3-1125-45f9-9515-c1fbf637f841","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/sapac-670e4","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2024-06-29T08:08:03.641Z","data":{"uid":"moSJjtfet80tjgRY4PF5sLjBUdN8","email":"fluviel@gmail.com","emailVerified":false,"metadata":{"creationTime":"2024-06-29T08:08:03.641Z","lastSignInTime":"2024-06-29T08:08:03.641Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"fluviel@gmail.com","federatedId":"fluviel@gmail.com","rawId":"fluviel@gmail.com"}]}}
+[debug] [2024-06-29T08:08:03.643Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast 200
+[debug] [2024-06-29T08:08:03.644Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2024-06-29T08:13:54.566Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast [none]
+[debug] [2024-06-29T08:13:54.566Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast {"eventId":"32018b76-f3fb-4724-a77a-58a97eb3b31f","eventType":"providers/firebase.auth/eventTypes/user.delete","resource":{"name":"projects/sapac-670e4","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2024-06-29T08:13:54.566Z","data":{"uid":"moSJjtfet80tjgRY4PF5sLjBUdN8","email":"fluviel@gmail.com","emailVerified":false,"metadata":{"creationTime":"2024-06-29T08:08:03.641Z","lastSignInTime":"2024-06-29T08:08:03.641Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"fluviel@gmail.com","federatedId":"fluviel@gmail.com","rawId":"fluviel@gmail.com"}]}}
+[debug] [2024-06-29T08:13:54.568Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast 200
+[debug] [2024-06-29T08:13:54.568Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2024-06-29T08:14:14.806Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast [none]
+[debug] [2024-06-29T08:14:14.806Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast {"eventId":"42e7d5c2-0067-4193-b14a-d6b001cbe2fb","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/sapac-670e4","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2024-06-29T08:14:14.806Z","data":{"uid":"gt4mEMtf55TyTi2Md2yzEfH092Hh","email":"fluviel@gmail.com","emailVerified":false,"metadata":{"creationTime":"2024-06-29T08:14:14.805Z","lastSignInTime":"2024-06-29T08:14:14.805Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"fluviel@gmail.com","federatedId":"fluviel@gmail.com","rawId":"fluviel@gmail.com"}]}}
+[debug] [2024-06-29T08:14:14.809Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast 200
+[debug] [2024-06-29T08:14:14.809Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2024-06-29T08:42:30.765Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast [none]
+[debug] [2024-06-29T08:42:30.765Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast {"eventId":"f1858ecd-909e-438a-9a18-13dec3e161ad","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/sapac-670e4","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2024-06-29T08:42:30.765Z","data":{"uid":"a0p8iltLPexeJVGwpY5Cz5XHAcnX","email":"worker@gmail.com","emailVerified":false,"metadata":{"creationTime":"2024-06-29T08:42:30.764Z","lastSignInTime":"2024-06-29T08:42:30.764Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"worker@gmail.com","federatedId":"worker@gmail.com","rawId":"worker@gmail.com"}]}}
+[debug] [2024-06-29T08:42:30.768Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast 200
+[debug] [2024-06-29T08:42:30.768Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/sapac-670e4/trigger_multicast {"status":"multicast_acknowledged"}

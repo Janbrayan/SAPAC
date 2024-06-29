@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
 import { app } from '../../services/firebaseConfig';
 import styles from './Dashboard.module.scss';
 
-const Dashboard: React.FC = () => {
+interface DashboardProps {
+    showTotalUsers: boolean;
+}
+
+const Dashboard: React.FC<DashboardProps> = ({ showTotalUsers }) => {
     const [totalUsers, setTotalUsers] = useState(0);
     const [totalReports, setTotalReports] = useState(0);
     const [pendingReports, setPendingReports] = useState(0);
@@ -12,10 +16,12 @@ const Dashboard: React.FC = () => {
         const fetchData = async () => {
             const db = getFirestore(app);
 
-            // Obtener el total de usuarios
-            const usersCollection = collection(db, 'users');
-            const usersSnapshot = await getDocs(usersCollection);
-            setTotalUsers(usersSnapshot.size);
+            if (showTotalUsers) {
+                // Obtener el total de usuarios
+                const usersCollection = collection(db, 'users');
+                const usersSnapshot = await getDocs(usersCollection);
+                setTotalUsers(usersSnapshot.size);
+            }
 
             // Obtener el total de reportes
             const reportsCollection = collection(db, 'reports');
@@ -29,16 +35,18 @@ const Dashboard: React.FC = () => {
         };
 
         fetchData();
-    }, []);
+    }, [showTotalUsers]);
 
     return (
         <div className={styles.dashboardContainer}>
             <h1>Dashboard</h1>
             <div className={styles.cardContainer}>
-                <div className={styles.card}>
-                    <h3>Total de Usuarios</h3>
-                    <p>{totalUsers}</p>
-                </div>
+                {showTotalUsers && (
+                    <div className={styles.card}>
+                        <h3>Total de Usuarios</h3>
+                        <p>{totalUsers}</p>
+                    </div>
+                )}
                 <div className={styles.card}>
                     <h3>Total de Reportes</h3>
                     <p>{totalReports}</p>

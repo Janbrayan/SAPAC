@@ -44,6 +44,25 @@ app.post('/createUser', async (req, res) => {
   }
 });
 
+app.put('/updateUser/:id', async (req, res) => {
+  const { id } = req.params;
+  const { email, name, role } = req.body;
+
+  try {
+    // Actualizar usuario en Firebase Authentication
+    await admin.auth().updateUser(id, { email });
+
+    // Actualizar usuario en Firestore
+    const db = admin.firestore();
+    await db.collection('users').doc(id).update({ name, email, role });
+
+    res.status(200).send({ message: 'Usuario actualizado exitosamente' });
+  } catch (error) {
+    console.error('Error al actualizar el usuario:', error);
+    res.status(400).send({ message: 'Error al actualizar el usuario', error: error.message });
+  }
+});
+
 app.delete('/deleteUser/:id', async (req, res) => {
   const { id } = req.params;
 
